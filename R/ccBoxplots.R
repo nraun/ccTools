@@ -3,7 +3,7 @@ give.n <- function(x){
 }
 
 ccBoxplots <- function(dat){
-stat <- datfile %>% group_by(genotype) %>% 
+stat <- dat %>% group_by(genotype) %>% 
   rstatix::wilcox_test(CI ~ condition, paired=F) %>%
   rstatix::add_xy_position(x="condition")
 
