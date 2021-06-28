@@ -7,9 +7,9 @@ findOutlier<-function(dat, Q=0.05,outliers=F){
   con <- levels(dat$condition)
   gen <- levels(dat$genotype)
   dat2 <- NULL
-  for (l in 1:length(mut)){
+  for (l in 1:length(gen)){
     for (j in 1:length(con)){
-      tmp <- subset(dat,genotype ==mut[[l]] & condition ==con[[j]])
+      tmp <- subset(dat,genotype ==gen[[l]] & condition ==con[[j]])
       tmp$res <- abs(lm(CI~I(seq(1:length(CI)) * 0 + gm_mean(CI)), data=tmp)$residuals)
       tmp <- tmp[order(tmp$res),]
       n <- length(tmp$res)
