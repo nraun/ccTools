@@ -1,4 +1,7 @@
 exportPattern("^[[:alpha:]]+")
 
+export("loadData")
+export("ccBoxplots")
+export("findOutlier")
 import("dplyr")
 import("ggplot2")
