@@ -2,7 +2,15 @@ gm_mean = function(x, na.rm=TRUE){
   exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))
 }
 
-# outliers as per https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-123
+#' Identify outliers using the ROUT method
+#' REF: https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-7-123
+#'
+#' @param dat The data object as loaded by loadData()
+#' @param Q FDR trheshold - default 0.05
+#' @param outliers Boolean indicating if outliers should be kept and returned (T) or removed (F). Default is FALSE.
+#' @return A data frame with outliers for each genotype/conditoin pairing removed (outliers=F).
+#' @export
+
 findOutlier<-function(dat, Q=0.05,outliers=F){
   con <- levels(dat$condition)
   gen <- levels(dat$genotype)
