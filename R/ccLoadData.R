@@ -1,8 +1,8 @@
 #' Load data table
 #'
-#' A function that loads in your analearn output file and sets the reference genotypes and conditions
+#' A function that loads in your .txt data file and sets the reference genotypes and conditions
 #'
-#' @param datname File name of tab delimited output of analearn. Leave NA to choose file in file browser.
+#' @param datname File name of tab delimited data file. Leave NA to choose file in file browser.
 #' @param refgenotype Character indicating the reference genotype (column name: 'genotype'). Leave NA to select interactively.
 #' @param naivelevel Character indicating the naive condition (column name: 'condition'). Default is 'N'.
 #' @return A data table with genotype and conditions as factors releveled to the indicated reference conditions.
