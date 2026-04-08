@@ -1,0 +1,22 @@
+Package: ccTools
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: 
+    person(given = "Nicholas",
+           family = "Raun",
+           role = c("aut", "cre"),
+           email = "nicholas.raun@radboudumc.nl")
+Description: Analysis and visualization tools for courtship conditioning experiments, including boxplots, memory index calculation, and bootstrap inference.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    ggplot2,
+    rstatix,
+    ggpubr,
+    stats
+Suggests:
+    shiny
+RoxygenNote: 7.3.3
